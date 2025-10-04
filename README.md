@@ -1,193 +1,230 @@
-# TailAdmin Pro - Next.js (v2.2)
+# TailAdmin Turborepo
 
-[TailAdmin](https://tailadmin.com) is a modern, responsive, and customizable admin dashboard template built using
-Tailwind CSS and Next.js. It is designed to help developers build beautiful and functional dashboards quickly and
-easily.
+A modern, scalable admin dashboard built with Next.js 15, TypeScript, Tailwind CSS, and Turborepo for optimal monorepo management.
 
-## Quick Links
+## 🚀 Features
 
-- [✨ Visit Website](https://tailadmin.com)
-- [📄 Documentation](https://tailadmin.com/docs)
-- [⬇️ Download](https://tailadmin.com/download)
-- [🌐 Live Site](https://nextjs-demo.tailadmin.com)
+- 🏗️ **Turborepo Monorepo** - Optimized build pipeline and workspace management
+- 🚀 **Next.js 15** - Latest version with App Router
+- 📱 **Responsive Design** - Mobile-first approach
+- 🎨 **Tailwind CSS** - Utility-first CSS framework
+- 📊 **Charts & Analytics** - ApexCharts integration
+- 🔐 **Authentication** - Complete auth system
+- 📧 **Email Templates** - Ready-to-use email components
+- 🛒 **E-commerce** - Product management, invoices, billing
+- 📈 **Analytics Dashboard** - Comprehensive analytics
+- 🎯 **CRM System** - Customer relationship management
+- 📦 **Logistics** - Delivery tracking and management
+- 💰 **Stocks & Finance** - Financial dashboard
+- 🎨 **UI Components** - 70+ reusable components
+- 🌙 **Dark Mode** - Built-in theme switching
+- 📱 **Mobile Optimized** - Perfect on all devices
 
-## Installation
+## 🏗️ Monorepo Structure
+
+```
+tailadmin-turborepo/
+├── apps/
+│   └── web/                 # Next.js application
+├── packages/
+│   ├── ui/                  # Shared UI components
+│   └── config/              # Shared configurations
+├── turbo.json               # Turborepo configuration
+└── package.json             # Root package.json with workspaces
+```
+
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js 18+ 
+- npm 10+
 
-To get started with TailAdmin, ensure you have the following prerequisites installed and set up:
+### Installation
 
-- Node.js 18.x or later (recommended to use Node.js 20.x or later)
+```bash
+# Clone the repository
+git clone https://github.com/tindevelopers/tailadmin-turborepo.git
+cd tailadmin-turborepo
 
-### Getting Started
+# Install all dependencies
+npm install
 
-1. Install dependencies:
+# Start development server
+npm run dev
+```
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+### Development
 
-   > Use `--legacy-peer-deps` flag if you face peer-dependency error during installation.
+```bash
+# Start all apps in development mode
+npm run dev
 
-2. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+# Start only the web app
+npm run dev --workspace=apps/web
 
-## Changelog
+# Build all apps
+npm run build
 
-### Version 2.2.0 - [July 30, 2025]
+# Build only the web app
+npm run build --workspace=apps/web
+```
 
-* Fixed reported minor bugs and UI issues
-* Updated packages
-#### 🧭 **Logistics Dashboard** – *Added*
+## 📋 Available Scripts
 
-* Redesigned logistics dashboard interface
-* Delivery activity table
-* Delivery tracking timeline
-* Total revenue earned chart
+- `npm run dev` - Start all apps in development mode
+- `npm run build` - Build all apps
+- `npm run lint` - Lint all workspaces
+- `npm run type-check` - Type check all workspaces
+- `npm run clean` - Clean all build artifacts
+- `npm run format` - Format code with Prettier
 
-#### 🛍️ **E-commerce Pages** – *Added*
+### Workspace Commands
 
-* **Products**:
+You can run commands in specific workspaces using:
 
-  * Product list table
-  * Add product form
-* **Invoices**:
+```bash
+# Run command in specific workspace
+npm run <script> --workspace=<workspace-name>
 
-  * Invoice list table
-  * Single invoice view
-  * View invoice modal
-  * Create invoice form
-* **Transactions**:
+# Examples:
+npm run dev --workspace=apps/web
+npm run build --workspace=packages/ui
+```
 
-  * Transaction list table
-  * Single transaction detail view
+## 📦 Packages
 
-#### 🧠 **AI Assistant Suite (New App Example)** – *Newly Added*
+### @tailadmin/ui
+Shared UI components and utilities that can be used across all apps.
 
-* Text generator
-* Image generator
-* Code generator
-* Video generator
+### @tailadmin/config
+Shared configuration files for TypeScript, Tailwind CSS, and other tools.
 
-#### 🔑 **API Key Management** – *Newly Added*
+## 🎯 Pages & Features
 
-* API key dashboard
-* API key table view
-* Add API key modal
+### Dashboard Pages
+- **Analytics** - Comprehensive analytics dashboard
+- **CRM** - Customer relationship management
+- **E-commerce** - Product and order management
+- **Logistics** - Delivery and tracking system
+- **Marketing** - Campaign and traffic analytics
+- **SaaS** - Software as a service metrics
+- **Stocks** - Financial and stock management
 
-#### 🔌 **Integrations (Pages)** – *Newly Added*
+### UI Elements
+- Alerts, Avatars, Badges
+- Buttons, Cards, Carousels
+- Dropdowns, Modals, Notifications
+- Pagination, Progress Bars
+- Tables, Tabs, Tooltips
+- And many more...
 
-* Integration cards UI
-* Integration details modal
-* Add integration modal
-* Integration settings modal
-* Delete integration confirmation modal
+### Forms & Tables
+- Form elements and layouts
+- Data tables with sorting/filtering
+- File upload components
+- Date pickers and selectors
 
-### ⚙️ **Support (New App Example)** – *Newly Added*
+### Other Features
+- **AI Tools** - Text, image, video, and code generators
+- **Email System** - Inbox and email management
+- **File Manager** - File and folder management
+- **Task Management** - Kanban boards and task lists
+- **Support System** - Ticket management
+- **Calendar** - Event scheduling
+- **Chat System** - Real-time messaging
 
-* Support ticket list page
-* Support ticket reply interface
+## 🔧 Benefits of Turborepo
 
-#### 📊 **Charts & Visuals** - *Imporoved*
+1. **Faster Builds**: Intelligent caching and parallel execution
+2. **Better Dependency Management**: Workspace-aware dependency resolution
+3. **Code Sharing**: Easy sharing of components and utilities between apps
+4. **Scalability**: Easy to add new apps and packages
+5. **Developer Experience**: Unified commands and better tooling
 
-* New bar chart design added
+## 🛠️ Adding New Apps
 
-### Version 2.1.2 - [Jun 02, 2025]
+To add a new app:
 
-#### Update Overview
+1. Create a new directory in `apps/`
+2. Add a `package.json` with the app configuration
+3. Update the root `tsconfig.json` references
+4. Update `turbo.json` if needed
 
-- Basic Table 3 Dropdown (cropped) update
-- Popover and Tooltip component overflow (cropped) issue update
+## 📦 Adding New Packages
 
-### Version 2.1.1 - [March 25, 2025]
+To add a new shared package:
 
-- Updated to Next v15.2.3 for [CVE-2025-29927](https://nextjs.org/blog/cve-2025-29927) concerns
-- Included overrides vectormaps for packages to prevent peer dependency errors during installation.
-- Migrated from react-flatpickr to flatpickr package for React 19 support
+1. Create a new directory in `packages/`
+2. Add a `package.json` with the package configuration
+3. Update the root `tsconfig.json` references
+4. Add the package to apps that need it
 
-### Version 2.1.0 - [March 10, 2025]
+## 🎨 Customization
 
-#### Update Overview
+### Theming
+The project uses Tailwind CSS with a comprehensive design system. You can customize:
+- Colors and typography
+- Component styles
+- Dark/light mode themes
 
-- Added new dashboard design for saas product.
-- New Metrics card
-- Product performance tab with charts
+### Adding New Pages
+1. Create a new file in `apps/web/src/app/`
+2. Follow the existing routing structure
+3. Use the provided components and layouts
 
-### Version 2.0.1 - [February 27, 2025]
+### Component Development
+- All components are in `apps/web/src/components/`
+- Follow the existing patterns and structure
+- Use TypeScript for type safety
 
-#### Update Overview
+## 🛠️ Technologies Used
 
-- Upgraded to Tailwind CSS v4 for better performance and efficiency.
-- Updated class usage to match the latest syntax and features.
-- Replaced deprecated class and optimized styles.
+- **Monorepo**: Turborepo
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: ApexCharts
+- **Icons**: Custom SVG icons
+- **Forms**: React Hook Form
+- **State Management**: React Context
+- **Build Tool**: Next.js built-in
 
-#### Next Steps
+## 🌐 Browser Support
 
-- Run npm install or yarn install to update dependencies.
-- Check for any style changes or compatibility issues.
-- Refer to the Tailwind CSS v4 [Migration Guide](https://tailwindcss.com/docs/upgrade-guide) on this release. if needed.
-- This update keeps the project up to date with the latest Tailwind improvements. 🚀
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-### v2.0.0 (February 2025)
+## 📄 License
 
-A major update focused on Next.js 15 implementation and comprehensive redesign.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-#### Major Improvements
+## 🆘 Support
 
-- Complete redesign using Next.js 15 App Router and React Server Components
-- Enhanced user interface with Next.js-optimized components
-- Improved responsiveness and accessibility
-- New features including collapsible sidebar, chat screens, and calendar
-- Redesigned authentication using Next.js App Router and server actions
-- Updated data visualization using ApexCharts for React
+For support and questions:
+- 📧 Email: support@tailadmin.com
+- 📖 Documentation: [docs.tailadmin.com](https://docs.tailadmin.com)
+- 🐛 Issues: [GitHub Issues](https://github.com/tindevelopers/tailadmin-turborepo/issues)
 
-#### Breaking Changes
+## 🤝 Contributing
 
-- Migrated from Next.js 14 to Next.js 15
-- Chart components now use ApexCharts for React
-- Authentication flow updated to use Server Actions and middleware
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-#### Breaking Changes
+## 📝 Changelog
 
-- Migrated from Next.js 14 to Next.js 15
-- Chart components now use ApexCharts for React
-- Authentication flow updated to use Server Actions and middleware
+### Version 2.2.0
+- ✅ Converted to Turborepo monorepo
+- ✅ Updated to Next.js 15
+- ✅ Enhanced TypeScript support
+- ✅ Improved performance with build caching
+- ✅ New shared packages structure
+- ✅ Better mobile responsiveness
 
-[Read more](https://tailadmin.com/docs/update-logs/nextjs) on this release.
+---
 
-### v1.3.4 (July 01, 2024)
-
-- Fixed JSvectormap rendering issues
-
-### v1.3.3 (June 20, 2024)
-
-- Fixed build error related to Loader component
-
-### v1.3.2 (June 19, 2024)
-
-- Added ClickOutside component for dropdown menus
-- Refactored sidebar components
-- Updated Jsvectormap package
-
-### v1.3.1 (Feb 12, 2024)
-
-- Fixed layout naming consistency
-- Updated styles
-
-### v1.3.0 (Feb 05, 2024)
-
-- Upgraded to Next.js 14
-- Added Flatpickr integration
-- Improved form elements
-- Enhanced multiselect functionality
-- Added default layout component
-
-## License
-
-Refer to our [LICENSE](https://tailadmin.com/license) page for more information.
+**Made with ❤️ by [TailAdmin](https://tailadmin.com)**
