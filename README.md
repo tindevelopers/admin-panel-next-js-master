@@ -1,6 +1,6 @@
-# TailAdmin Turborepo
+# Admin Panel Next.js Master
 
-A modern, scalable admin dashboard built with Next.js 15, TypeScript, Tailwind CSS, and Turborepo for optimal monorepo management.
+A modern, scalable admin dashboard built with Next.js 15, TypeScript, Tailwind CSS, and Turborepo for optimal monorepo management. Master template for multi-tenant admin panel platform across various industries.
 
 ## 🚀 Features
 
